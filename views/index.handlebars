@@ -1,0 +1,49 @@
+
+
+<div class="burgersOrdered">
+	<h2>Burgers Ordered!</h2>
+	<ul>
+	  {{#each burger}}
+	    {{#unless this.devoured}}
+	      <li>
+	        {{this.burger_name}}
+
+	        <form action="/{{this.id}}?_method=PUT" method="POST">
+	          <input type="hidden" name="devour" value="false">
+	          <button class="dbtn" type="submit">Devour!</button>
+	        </form>
+	      </li>
+	    {{/unless}}
+	  {{/each}}
+	</ul>
+</div>
+
+<div class="mainOrder">
+	<img id="burger" src="https://us.123rf.com/450wm/lenm/lenm1206/lenm120600091/13898796-mascot-illustration-featuring-a-burger-with-double-patties.jpg?ver=6">
+	<h1>Eat Da Burger</h1>
+
+	<form class="create-update-form" action="/" method="POST">
+
+	  <div class="form-group">
+	    <label for="ob"><h2>Order a burger</h2></label>
+	    <input type="text" id="ob" name="name">
+	  </div>
+
+	  <button type="submit">Order</button>
+	</form>
+
+</div>
+
+<div class="burgersEaten">
+	<h2>Burgers Devoured!</h2>
+
+	<ul>
+	  {{#each burger}}
+	    {{#if this.devoured}}
+	      <li class="dlist">
+	        {{this.burger_name}}
+	      </li>
+	    {{/if}}
+	  {{/each}}
+	</ul>
+</div>

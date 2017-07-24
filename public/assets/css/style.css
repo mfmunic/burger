@@ -1,0 +1,46 @@
+body {
+	display: flex;
+	justify-content: space-around;
+	background-color: #ffdb58;
+}
+
+.burgersOrdered{
+	width: 30%;
+	height: 100vh;
+	justify-content: center;
+}
+
+.mainOrder{
+	width: 30%;
+	height: 100vh;
+	justify-content: center;
+	text-align: center;
+}
+
+.burgersEaten{
+	width:30%;
+	height: 100vh;
+	justify-content: center;
+}
+
+#ob{
+	width: 100%;
+	margin-bottom: 10px;
+	justify-content: center;
+}
+
+#burger{
+	width: 100px;
+}
+
+ul{
+	list-style-type: none;
+}
+
+.dbtn {
+	margin-bottom: 20px;
+}
+
+.dlist{
+	margin-bottom: 10px;
+}
